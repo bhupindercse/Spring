@@ -1,0 +1,120 @@
+// ===================================================================================
+//	PRICING
+// ===================================================================================
+#pricing
+{
+	// min-height: 600px; //$default_section_height;
+	// background: url(../images/backgroundone.jpg) no-repeat center center #000;
+	// background-size: cover;
+
+		width:100%;
+		color: #fff;
+		clear:both;
+		min-height: 528px;
+		background:  url(../images/pricing.jpg)  no-repeat scroll center center /cover;
+
+
+	.pricing_content{
+		width:80%;
+		margin:auto;
+		text-align: center;
+		padding-top: 6em;
+
+		.price_category_div{
+			display:inline-block;
+			width:30%;
+			padding: 3em;
+
+			h3{
+				border-bottom: 2px solid #C2C2C2;
+			}
+
+			ul{
+				list-style-type: none;
+				padding-left: 0px;
+				text-align: left;
+
+				li{
+					font-weight: bold;
+					&:before{
+						font-family: 'icomoon';
+						content: "\e90c";
+						color: #14b0bf;
+						padding-right: 2em;
+					}
+				}
+			}
+			
+			.price_signup_button{
+				width:100%; 
+				margin:auto;
+
+				.btn{
+					background: $theme_red;//#C02727;
+					border: 2px solid $theme_red;
+
+					&:hover{
+						background:  darken($theme_red,10);
+						border: 2px solid darken($theme_red,10);
+						color: #fff;
+					}
+					@include breakpoint(bp_small){
+						padding: 0.5em;
+					}
+
+				}
+			}
+
+			@include breakpoint(bp_large){
+				display:inline-block;
+				width:50%;
+				padding: 3em;
+			}
+			@include breakpoint(bp_small){
+				display:inline-block;
+				width:100%;
+				padding: 3em;
+			}
+
+
+		}
+
+		@include breakpoint(bp_large){
+			width:100%;
+			padding-top: 2em;
+			background: #232323;
+		}
+
+	}
+
+
+
+	.price_wrapper{
+		padding:1.5em;
+	}
+	.price_dollar{
+		display:inline-block;
+		font-size: 4.5em;
+		font-family:'roboto_light';
+	}
+	.price_right_cents_wrapper{
+		display:inline-block;
+	}
+	.price_cents{
+		 padding-bottom: 0.5em;
+		 float: left;
+		 font-size: 2em;
+		 font-family:'roboto_light';
+	}
+	.price_per_month{
+		font-size: 1em;
+		color: #c2c2c2; 
+		font-family:'roboto_light';
+	}
+
+	.price_description{
+		color: #c2c2c2; 
+		width: 85%;
+	}
+
+}

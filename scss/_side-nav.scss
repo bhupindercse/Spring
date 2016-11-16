@@ -1,0 +1,87 @@
+// ===================================================================================
+//	ADMIN NAV
+// ===================================================================================
+.side-nav
+{
+	.nav-title
+	{
+		padding: 0.5em 1em;
+		text-align: center;
+		font-size: 1.5em;
+		background: $grey;
+		color: #FFF;
+		line-height: 1em;
+	}
+
+	.nav-header
+	{
+		position: relative;
+		background: $cream;
+		color: $dark_grey;
+		font-size: 1.2em;
+		padding: 0.8em 1em;
+		text-align: center;
+		line-height: 1em;
+		cursor: pointer;
+		word-wrap: break-word;
+
+		&:hover
+		{
+			background: darken($cream, 10);
+		}
+
+		&:after
+		{
+			position: absolute;
+			top: 0.7em;
+			right: 0.5em;
+			content: "\279c";
+			color: #000;
+			font-size: 1.1em;
+
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		&.nav-header-active
+		{
+			&:after
+			{
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.nav-group
+	{
+		display: none;
+		font-size: 0.8em;
+
+		&.nav-group-active
+		{
+			display: block;
+		}
+	}
+
+	a
+	{
+		display: block;
+		position: relative;
+		font-size: 1.2em;
+		padding: 0.8em 1em;
+		text-align: center;
+		color: $dark_grey;
+		background: #eee;
+		line-height: 1em;
+
+		&:hover
+		{
+			background: #ddd;
+		}
+	}
+}

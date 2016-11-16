@@ -1,0 +1,292 @@
+// ===================================================================================
+//	NEWS
+// ===================================================================================
+#news
+{
+	min-height: $default_section_height;
+	background: url(../images/bg/background2.png) repeat scroll center center; //no-repeat center center #000; 
+	//background-size: cover;
+
+	padding-top: 10em;//14em;
+	padding-bottom: 10em;//4em;
+
+	// @include breakpoint(bp_small){
+	// 	padding-top: 16em;
+	// }
+
+	.content-wrapper
+	{
+		@include pie-clearfix;
+		background: #FFF;
+		box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+
+		@include breakpoint(bp_mid){
+	 		padding-top: 0em;
+		}
+	}
+}
+
+.news-item-wrapper
+{
+	@include pie-clearfix;
+}
+
+.news-item
+{
+	@include pie-clearfix;
+	display: none;
+	position: relative;
+
+	&.active
+	{
+		display: block;
+
+		@include breakpoint(bp_mobile){
+			display: table;
+			width:100%;
+		}
+	}
+
+	&.small-news-item
+	{
+		width: 50%;
+		float: left;
+		height: 250px;
+		// height: 500px;
+
+		@include breakpoint(bp_small){
+			width: 100%;
+			height: auto;
+			float: none;
+		}
+	}
+}
+
+.news-copy-section
+{
+	background: #FFF;
+
+	@include breakpoint(bp_mobile){
+		float: none;
+		width: 100%;
+		min-height: auto;
+		display: table-footer-group;
+	}
+
+	&.with-image
+	{
+		float: left;
+		width: 50%;
+		min-height: 508px;
+
+		.small-news-item & {
+			min-height: auto;
+			float: right;
+
+			@include breakpoint(bp_small){
+				float: none;
+			}
+		}
+
+		@include breakpoint(bp_mobile){
+			float: none;
+			width: 100%;
+			min-height: auto;
+		}
+	}
+
+	.news-title
+	{
+		//font-family: 'artifikamedium';
+		font-size: 2em;
+		margin-top: 0;
+		margin-bottom: 0.2em;
+		color: #000;
+	}
+
+	.news_subtitle{
+		color: $theme_blue;
+		font-size: 1.2em;
+		padding-top:0.5em;
+		padding-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	.news-date
+	{
+		//font-family: 'artifikamedium';
+		//color: $theme_blue;
+		font-size: 1.2em;
+		margin-bottom: 1em;
+
+		&.page-date
+		{
+			color: #c3c2c2;
+			padding: 0.4em 0 0.5em;
+
+			.icon-clock
+			{
+				padding-right: 0.5em;
+			}
+		}
+	}
+
+	.news-content
+	{
+		line-height: 1.3em;
+	}
+
+	.fb-like
+	{
+		margin-top: 2em;
+	}
+}
+.news-image-section
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	background-size: cover;
+
+	.small-news-item & {
+		right: none;
+		top: 1em;
+		bottom: 1em;
+		left: 1em;
+
+		@include breakpoint(bp_small){
+			left: auto;
+			right: 1em;
+		}
+
+		@include breakpoint(bp_mobile){
+			right: auto;
+		}
+	}
+
+	img
+	{
+		display: block;
+		line-height: 1em;
+	}
+
+	@include breakpoint(bp_mobile){
+		float: none;
+		width: 100%;
+		min-height: 300px;
+		position: relative;
+		display: block;
+	}
+}
+
+// Used to pad content.  Initially used when needing the display: table; stuff
+.padder
+{
+	padding: 2em;
+}
+
+.news-nav
+{
+	@include pie-clearfix;
+	
+	background: #000;
+	//color: #fff;
+	// background: url(../images/bg/seamless_paper_texture.jpg) repeat center center $cream;
+
+
+	@include breakpoint(bp_mobile){
+		text-align: center;
+		background: rgba(52, 93, 120, 0.76);//$dark_cream;
+	}
+
+	a
+	{
+		@include pie-clearfix;
+		float: left;
+		font-size: 1.2em;
+		line-height: 1em;
+		padding: 1.5em 0.5em;
+		width: 25%;
+		text-align: center;
+		color: #fff;
+		border-right: 2px solid $dark_cream;
+		text-transform: uppercase;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+
+		&:last-child
+		{
+			border-right: none;
+		}
+
+		&.active, &:hover
+		{
+			//background: $dark_cream;
+			//background: url(../images/bg/background1.jpg) repeat center center;
+			background-color: $theme_blue;
+			border-color: #d9d5cd;
+			font-weight: bold;
+
+			.story-count
+			{
+				border-color: #FFF;
+			}
+		}
+
+		&.all-link
+		{
+			float: right;
+
+			@include breakpoint(bp_mobile){
+				background: $theme_blue;//#847F77;
+				float: none;
+				display: block;
+				clear: both;
+			}
+		}
+
+		@include breakpoint(bp_mobile){
+			
+			display: inline-block;
+			width: auto;
+			float: none;
+			border-right: none;
+			color: #FFFEFC;
+			padding: 1em 0.5em;
+
+			&:last-child
+			{
+				margin-right: 0;
+			}
+
+			.story-name
+			{
+				display: none;
+			}
+		}
+
+		.story-count
+		{
+			display: none;
+			border: 1px solid #D8D0C1;
+			color: #FFF;
+			font-size: 1.3em;
+			line-height: 1em;
+			border-radius: 1em;
+			padding: 0.3em 0.5em;
+			font-weight: bold;
+
+			&:hover
+			{
+				border-color: #FFF;
+			}
+
+			@include breakpoint(bp_mobile){
+				display: block;
+			}
+		}
+	}
+}

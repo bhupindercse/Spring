@@ -1,0 +1,140 @@
+// ===================================================================================
+//	LAYOUT
+// ===================================================================================
+$default_section_height: 800px;
+$default_box_shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+
+body.single-page
+{
+	background: url(../images/mainpano.jpg) no-repeat center center #000;
+	background-size: cover;
+
+	.content-wrapper
+	{
+		padding-top: 9em;
+		padding-bottom: 2em;
+
+		&
+		{
+			padding-top: 2em;
+		}
+	}
+
+	.page-section
+	{
+		@include pie-clearfix;
+		// margin-top: 10em;
+		background: #c2c2c2; //#FFF;
+		box-shadow: $default_box_shadow;
+
+		min-height: 300px;
+	}
+}
+
+.content-wrapper
+{
+	width: $width;
+	margin: auto;
+
+	@include breakpoint(bp_large){
+		width: 100%;
+	}
+
+	@include breakpoint(bp_mid){
+		width: 100%;
+		padding-top: 30em;
+	}
+}
+
+// ===================================================================================
+//	COLUMNS
+// ===================================================================================
+.col
+{
+	@include pie-clearfix;
+	float: left;
+
+	&.col-80
+	{
+		width: 80%;
+	}
+
+	&.col-20
+	{
+		width: 20%;
+	}
+}
+
+.content-col
+{
+	padding: 2em;
+	color: #000;
+}
+
+// ===================================================================================
+//	Scrolling section
+// ===================================================================================
+.section-scroller-wrapper
+{
+	height: 500px;
+	position: relative;
+}
+.section-scroller
+{
+	height: 100%;
+	overflow: scroll;
+}
+.scroll-loading
+{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1em;
+	text-align: center;
+	font-size: 2em;
+	background: linear-gradient(top, transparent, #FFF 20%);
+
+	span
+	{
+		animation: fadeInOut 2s linear infinite;
+	}
+}
+
+@keyframes fadeInOut {
+	50%
+	{
+		opacity: 0;
+	}
+
+	75%
+	{
+		opacity: 1;
+	}
+
+	100%
+	{
+		opacity: 1;
+	}
+}
+
+.scroll-more-btn
+{
+	display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 2em;
+    padding: 1em;
+    background: #ccc;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover
+    {
+    	background: $cream;
+    }
+}

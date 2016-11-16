@@ -1,0 +1,466 @@
+// ===================================================================================
+//	HEADER
+// ===================================================================================
+.header
+{
+	background: rgba(255, 255, 255,0.9);
+	color: #000;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 101;
+	height: 56px;
+	.single-page &
+	{
+		position: fixed;//relative;
+	}
+
+	@include breakpoint(bp_mid){
+		background: rgba(255, 255, 255,0.9);
+		//background: #fff;
+		//background: rgba(0,0,0,0.8);
+		// position: absolute;
+		// padding-top: 1em;
+		//padding-bottom: 1em;
+		top: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		height:8em;
+	}
+
+	.header_left_tabs_div{
+		background-color: #e3e7e7;
+		width: 60%;
+		float: left;
+		ul{
+			float: right;
+		}
+
+		@include breakpoint(1600px){
+			width: 75%;
+		}
+		@include breakpoint(bp_large){
+			width: 100%;
+			background-color: #fff;
+			display: none;
+		}
+		
+	}
+
+	.header-content
+	{
+		@include pie-clearfix;
+		width: $width;
+		margin: auto;
+
+		@include breakpoint(bp_large){
+			width: 100%;
+		}
+
+		.logo-li
+		{
+			@include breakpoint(bp_large){
+				width: 39%;
+			}
+			@include breakpoint(980px){
+				width: 35%;
+			}
+			@include breakpoint(900px){
+				width: 30%;
+			}
+			@include breakpoint(870px){
+				width: 27%;
+			}
+			@include breakpoint(830px){
+				width: 24%;
+			}
+			@include breakpoint(bp_mid){
+				width: 100%;
+			}
+		}
+
+		.header-logo
+		{
+			display: block;
+			// margin-left: -3em;
+			// margin-right: 1em;
+			 float: left;
+			 padding-top: 1em; 
+			 padding-bottom: 1em;
+
+			img
+			{
+				// width: 310px;
+				// height:130px;
+				width: 230px;
+				height: 83px;
+				
+
+				display: block;
+				//line-height: 1em;
+
+				@include breakpoint(bp_mid){
+					margin: auto;
+					max-width: 74%;
+				}
+			}
+
+			@include breakpoint(1130px){
+				margin-left: 1em;
+			}
+
+			@include breakpoint(bp_mid){
+				text-align:center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 0em;
+				margin-top: -1em;
+				width:100%;
+			}
+		}
+	}
+
+	.mobile_menu_logo{
+		display: none;
+		@include breakpoint(bp_large){
+			
+			display: block;
+			.logo_image{
+				height:150px;
+			}
+		}
+	}
+
+	.mobile_menu{
+		background-color: $theme_blue;
+		color: #fff;
+		display: none;
+		cursor: pointer;
+		font-size: 2em;
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
+
+		@include breakpoint(bp_large){
+			display: block;
+		}
+
+		&:after{
+			font-family: 'icomoon';
+			content: "\e90a";
+			padding-right: 1em;
+			//float:right;
+			transform: translateY(-50%);
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		&.active{
+			&:after{
+				content: "\e90b";
+			}
+		}
+
+
+	}
+	
+
+
+	ul.nav
+	{
+		@include pie-clearfix;
+		list-style: none;
+		display: block;
+		margin: 0;
+		padding: 0;
+		//float: right;
+
+		@include breakpoint(bp_mid){
+			float: none;
+			padding-left:0em;
+		}
+
+		li
+		{
+			display: inline-block;
+			vertical-align: baseline;
+			padding-left: 1.5em;
+			padding-right: 1.5em;
+			border-left: 2px solid #c2c2c2;
+
+			@include breakpoint(bp_large){
+				display: block;
+				padding-left: 0em;
+				padding-right: 0em;
+			}
+
+			.no_border{
+				border: 0px;
+			}
+
+			// @include breakpoint(bp_mid){
+			// 	display: block;
+
+			// 	// &.main-link
+			// 	// {
+			// 	// 	display: none;
+			// 	// }
+
+			// 	&.visible
+			// 	{
+			// 		display: block;
+			// 	}
+			// }
+
+			// &.mobile
+			// {
+			// 	display: none;
+			// 	cursor: pointer;
+			// 	font-size: 2em;
+			// 	//padding-top: 0.2em;
+			// 	padding-bottom: 0.2em;
+
+			// 	@include breakpoint(bp_mid){
+			// 		display: block;
+			// 		// float:right;
+			// 		// margin-top: -0.5em;
+			// 		//padding-right: 1em;
+			// 	}
+			// }
+		}
+
+		a.link, .mobile
+		{
+			color: $theme_blue;
+			display: inline-block;
+			font-size: 1.3em;
+			padding-bottom:1em;
+			padding-top: 1em;
+			padding-right: 0.4em;
+			padding-left: 0.4em;
+
+			border-bottom: 6px solid transparent;
+			text-transform: uppercase;
+
+			@include breakpoint(1130px){
+				font-size: 1.2em;
+			}
+
+			@include breakpoint(bp_mid){
+				display: block;
+				text-align: center;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				padding-right: 0.4em;
+				padding-left: 0.4em;
+				color: #000;
+				border-bottom: 1px solid #c2c2c2;
+				&:hover{
+					color: $theme_blue;
+				}
+
+			}
+
+			&:hover, &.active
+			{
+				color: #000;
+				@include breakpoint(bp_mid){
+					border-bottom: 3px solid #000;
+				}
+
+			}
+		}
+	}
+
+	.contact-nav
+	{
+		@include pie-clearfix;
+		//margin-left: 2.55em;
+		text-align: center;
+
+		@include breakpoint(bp_mid){
+			margin-left: 1em;
+			margin-right: 1em;
+			font-size: 0.8em;
+		}
+
+		a
+		{
+			color: $theme_blue;
+			display: inline-block;
+			padding: 0.1em 0.5em;
+			font-size: 1.2em;
+			line-height: 1em;
+
+			&:hover
+			{
+				color: $dark_grey;
+			}
+		}
+
+		.need_ride_text{
+			margin-left: -8em; 
+			position: absolute;
+			font-weight: bold;
+			font-size: 1.5em;
+			line-height: 1em;
+			@include breakpoint(bp_mid){
+				margin-left: -8em;//0em; 
+				position: relative;
+			}
+		}
+
+		.phone
+		{
+			padding-bottom: 0.8em;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.5em;
+			line-height: 1em;
+
+			@include breakpoint(bp_mid){
+				float: none;
+				margin-top: -1em;
+				padding-left: 8em;
+				padding-bottom: 0.3em;
+				//padding-top: 0.7em;
+			}
+		}
+	}
+}
+
+.search_box {
+    // line-height: 58px;
+    margin-right: 27px;
+    border-color: transparent;
+    padding-left: 20px;
+    border-radius: 10px;
+    // font-size: 25px !important;
+}
+
+.search_btn {
+    // height: 64px;
+    float: right;
+    margin-top: -64px;
+    background-color: #9FD042;
+    margin-right: 0px;
+    position: relative;
+    width: 82px;
+    border-color: transparent;
+    border-radius: 0px 8px 7px 0px;
+}
+
+.icon-search {
+    color: #fff;
+    line-height: 1.5em !important;
+	font-size: 1.8em;
+}
+
+
+.header_search_div{
+	background-color: #fff;
+	width: 40%;
+	float: right;
+
+	.form-field{
+		width: 50%; 
+		display: inline-block; 
+		background-color: #fff;
+		padding-top: 0.7em; 
+		// height:54px; 
+		padding-left: 4em; 
+		padding-right: 2em;
+
+		input[type='text']{
+			background: #f2f2f2;
+		}
+
+		@include breakpoint(bp_mid){
+			padding: 0em;
+			// height:37px; 
+		}
+
+		@include breakpoint(1600px){
+			width: 90%;
+		}
+	}
+
+	@include breakpoint(1600px){
+		width: 25%;
+	}
+	@include breakpoint(bp_large){    
+		width: 100%;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		background-color: #505b5d;
+	}
+	
+}
+
+.search_icon_div{
+	width: 50px;
+	background-color: $theme_red; 
+	height: 37px; 
+	border-radius: 3px 0px 0px 3px;
+	position: absolute;
+	text-align: center;
+	span{
+		line-height:3em; 
+		cursor: pointer;
+	}
+
+	input{
+		padding-left: 4.5em;
+	}
+}
+
+.logo_image_a{
+	@include breakpoint(bp_mid){
+		display:none;
+	}
+}
+
+.logo_image{
+	height: 50px;
+    position: relative;
+    margin-top: -45px;
+    right: 1em;
+    top: 1.5em;
+
+	@include breakpoint(bo_mid){
+		height: 100px;
+	}
+	// @include breakpoint(bo_mid){
+	// 	padding-left:10%;
+	// }
+
+}
+			
+.social-nav
+{
+	display: inline-block;
+	border: 2px solid #D9D9D9;
+	border-radius: 0.4em;
+	padding: 0.5em;
+	text-align: center;
+
+	@include breakpoint(bp_mid){
+		//float: none;
+		display: none;
+	}
+
+	a
+	{
+		color: $theme_blue;
+		display: inline-block;
+		padding: 0.1em 0.5em;
+		font-size: 1.2em;
+		line-height: 1em;
+
+		&:hover
+		{
+			color: $dark_grey;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+// ===================================================================================
+//	Loaders
+// ===================================================================================
+$aLoader-color:   #222222;
+$aLoader-size:    15px;
+$aLoader-spacing: 5px;
+$aLoader-border:  3px;
+
+.ajax-loader
+{
+	display: none;
+
+	.loader-wrapper
+	{
+		display: table;
+		border: $aLoader-border solid $aLoader-color;
+		padding: $aLoader-spacing;
+		
+		// Horizontal centering
+		margin: 0 auto;
+		
+		// Vertical centering
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		.aloader-item
+		{
+			display: block;
+			width: $aLoader-size;
+			height: $aLoader-size;
+			float: left; 
+			
+			background-color: $aLoader-color;
+			zoom: 1;
+			filter: alpha(opacity=0);
+			opacity: 0;
+			
+			animation: _fade 0.5s 2s infinite alternate forwards;
+		}
+		
+		.aloader-item:not(:last-child) { margin-right: $aLoader-spacing; }
+		
+		// Delay
+		.aloader-item:first-child { animation-delay: 0.2s; }
+		.aloader-item:nth-child(2) { animation-delay: 0.4s; }
+		.aloader-item:last-child { animation-delay: 0.6s; }
+		
+		// Animation
+		@keyframes _fade
+		{
+			from
+			{
+				filter: alpha(opacity=0);
+				opacity: 0;
+			}
+			
+			to
+			{
+				filter: alpha(opacity=100);
+				opacity: 1; 
+			}
+		}
+	}
+}

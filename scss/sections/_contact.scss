@@ -1,0 +1,391 @@
+// ===================================================================================
+//	CONTACT
+// ===================================================================================
+#signup
+{
+	@include pie-clearfix;
+	position: relative;
+	min-height: 48em;
+	background: url(../images/AdobeStock_35513966.jpeg) no-repeat scroll center center / cover;
+	color: #FFF;	
+	margin-top: 1em;
+
+	.signup_header{
+		background-color: #334d55; 
+		color:#fff; 
+		padding: 2em; 
+		border-radius: 10px 10px 0px 0px;
+		h2{
+			color:#fff;
+		}
+		.title{
+			color:#fff; 
+			font-family:'roboto_light';
+		}
+	}
+
+	.content-wrapper
+	{
+		width:33%;
+		margin:auto;
+		@include breakpoint(bp_mid){
+			width:50%;
+	 		padding-top: 0em;
+		}
+
+		@include breakpoint(bp_small){
+			width:90%;
+	 		padding-top: 0em;
+		}
+	}
+
+	.google-map
+	{
+		width: 100%;
+		height: 350px;
+		background: #F0EDE5;
+	}
+
+	.contact_header{
+		font-weight:bold;
+		font-size:1.2em;
+		padding-bottom:1em;
+	}
+
+	.address
+	{
+		padding-bottom: 1em;
+		color: #D9D9D9;
+	}
+
+	// .contact-header-image
+	// {
+	// 	width: 100%;
+	// 	height: 200px;
+	// 	//background: #F0EDE5;
+	// 	background: url(../images/bg/banner.jpg) repeat center center #1c1c1c;
+	// 	background-size: cover;
+	// }
+
+	.contact-sides
+	{
+		float: left;
+		width: 25%;
+		padding: 10em 1em;
+	}
+	
+	// ===================================
+	//	Contact Nav
+	// ===================================
+	.contact-nav
+	{
+		text-align: right;
+		//padding-right: 2em;
+
+		@include breakpoint(bp_small){
+			display: none;
+			float: none;
+			text-align: center;
+			padding: 1em 1em 1em 1em;
+			width: 100%;
+		}
+
+		&.contact-nav-mobile
+		{
+			display: none;
+
+			@include breakpoint(bp_small){
+				display: block;
+			}
+		}
+
+		.padder
+		{
+			//padding: 0 1em 0 0;
+
+			@include breakpoint(bp_small){
+				padding: 0 0;
+			}
+		}
+
+		h3
+		{
+			color: #FFF;
+			text-transform: uppercase;
+			font-size: 1.2em;
+
+			span
+			{
+				display: inline-block;
+				padding-right: 0.5em;
+
+				&:last-child
+				{
+					padding-right: 0;
+				}
+
+				&::first-letter
+				{
+					font-size: 150%;
+				}
+			}
+		}
+
+		ul
+		{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-transform: uppercase;
+
+			li
+			{
+				@include breakpoint(bp_small){
+					display: inline-block;
+    				padding: 1em 0.3em 0;
+    			}
+			}
+
+			a
+			{
+				color: #FFF;
+				font-size: 1em;
+				line-height: 1em;
+				display: block;
+				margin-bottom: 0.8em;
+
+				&:hover
+				{
+					color: $red;
+				}
+			}
+		}
+	}
+	
+	// ===================================
+	//	Contact info
+	// ===================================
+	.contact-info
+	{
+		text-align: left;
+
+		@include breakpoint(bp_small){
+			float: none;
+			width: 100%;
+			text-align: center;
+			padding: 1em;
+		}
+
+		.padder
+		{
+			padding: 0 0 0 1em;
+
+			@include breakpoint(bp_small){
+				padding: 0;
+				padding-bottom: 1em;
+			}
+		}
+
+		a
+		{
+			color: #FFF;
+
+			&:hover
+			{
+				color: $grey
+			}
+		}
+
+		.contact-top
+		{
+			padding-bottom: 1em;
+			font-size: 1em;
+			line-height: 1.3em;
+
+			.email
+			{
+				white-space: nowrap;
+			}
+		}
+
+		.social-nav
+		{
+			float: left;
+			margin-top: 1em;
+			color: $theme_blue;
+
+			@include breakpoint(bp_small){
+				float: none;
+			}
+		}
+	}
+	
+	// ===================================
+	//	Form
+	// ===================================
+	.contact-form
+	{
+		position:absolute;// relative;
+		z-index: 1;
+		margin:auto;
+		border-radius: 10px;
+		width: 33%;
+		background: $background_grey;
+		box-shadow: $default_box_shadow;
+		min-height: 300px;
+		margin-top: 5em;
+		color: #000;
+		// padding: 3em;
+		margin-bottom: 5em;
+		text-align: center;
+
+		@include breakpoint(bp_mid){
+			float: none;
+			width: 50%;
+			margin-bottom: 2em;
+		}
+		@include breakpoint(bp_small){
+			width: 90%;
+	 		
+		}
+
+		.form-field
+		{
+			padding-left: 2em;
+			padding-right: 2em;
+
+
+
+			.icon-lock {
+			    color: #fff;
+			    line-height: 1.5em !important;
+				font-size: 1.8em;
+			}
+			.icon-user {
+			    color: #fff;
+			    line-height: 1.5em !important;
+				font-size: 1.8em;
+			}
+			.icon-shop {
+			    color: #fff;
+			    line-height: 1.5em !important;
+				font-size: 1.8em;
+			}
+			.icon-mail {
+			    color: #fff;
+			    line-height: 1.5em !important;
+				font-size: 1.8em;
+			}
+			.icon-bin {
+			    color: #fff;
+			    line-height: 1.5em !important;
+				font-size: 1.8em;
+			}
+
+		}
+
+		h3
+		{
+			font-weight: normal;
+			font-size: 1.43em;
+			margin-bottom: 0.5em;
+		}
+
+		p
+		{
+			font-size: 0.9em;
+			margin-bottom: 1em;
+			line-height: 1.1em;
+		}
+
+		.red-txt, p
+		{
+			font-family: $font_base_family;
+		}
+
+		form
+		{
+			margin-top: 1em;
+		}
+	}
+
+
+	.form_field_icon{
+		width: 50px;
+		background-color: #C02727;
+		height: 37px;
+		border-radius: 5px;
+		position: absolute;
+		span{
+			line-height:3em;
+		}
+	}
+
+	.newsletter_checkbox_div{
+		float: left;
+		padding-left: 2em;	
+		padding-top: 0.5em;
+	}
+	.signup_button_div{
+		float: left; 
+		padding-left: 2em; 
+		display: block; 
+		clear: both; 
+		padding-bottom: 2em;
+	}
+
+	.mandatory_fields{
+		float:right; 
+		color:#9d9696; 
+		padding-right: 2em; 
+		padding-top: 0.5em;
+	}
+
+
+
+/* .squaredFour */
+.squaredFour {
+  width: 20px;
+  position: relative;
+  margin: 20px auto;
+  label {
+    // width: 20px;
+    // height: 20px;
+    // cursor: pointer;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // background: #fcfff4;
+    // background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    // border-radius: 4px;
+    // box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    &:after {
+    	  font-family: 'icomoon';
+    	  content: "\e909";
+
+      //content: '';
+      // width: 9px;
+      // height: 5px;
+      // position: absolute;
+      // top: 4px;
+      // left: 4px;
+      // border: 3px solid #333;
+      // border-top: none;
+      // border-right: none;
+      // background: transparent;
+      // opacity: 0;
+      // transform: rotate(-45deg);
+    }
+    &:hover::after {
+      opacity: 0.5;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }    
+}
+/* end .squaredFour */
+}

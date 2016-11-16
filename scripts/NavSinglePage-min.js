@@ -1,0 +1,1 @@
+var DM=DM||{};DM.NavSinglePage=function(){$(function(){i()});var i=function(){$("li.mobile").click(function(){$("li.main-link").is(":visible")?$("li.main-link").removeClass("visible"):$("li.main-link").addClass("visible")})}}();

@@ -1,0 +1,88 @@
+// ===================================================================================
+//	PRICING
+// ===================================================================================
+#review
+{
+	width:100%;
+	clear:both;
+	background-color: #fff;//$background_grey;
+
+
+
+	.review_header{
+		width:100%; 
+		text-align: center; 
+		//height:7em; 
+		background-color:#334d55; 
+		color: #fff;
+		padding:2em; 
+		border-top: 2px solid #5a6c71;
+		@include breakpoint(bp_mid){
+			padding:0.5em; 
+		}
+	}
+
+	.no_border{
+		border: none !important;
+	}
+
+	.review_content{
+		width: 80%;//70%;
+		margin:auto;
+	
+		.inner_review_content{
+			display:inline;
+			text-align: center;
+			width:100%;
+
+			.review_box{
+				display:inline-block; 
+				width:30%; 
+				margin-top:2em;
+				margin-bottom:2em;
+				border-right: 2px solid #bdbdbd;
+				vertical-align: top;
+
+
+				.review_description{
+					color: #333333; 
+					width: 60%; 
+					margin: auto;
+					line-height: 1.2em;
+					@include breakpoint(bp_mid){
+						width:100%;
+						padding: 1em;
+						margin:auto;
+					}
+					@include breakpoint(bp_small){
+						border-top: 2px solid #c2c2c2;
+						padding-top: 4em !important;
+
+					}
+				}
+				.signature{
+					color:#C02727;
+				}
+
+				@include breakpoint(bp_small){
+					width:100%;
+					display: block;
+					padding: 2em;
+					//border-bottom: 2px solid #c2c2c2;
+					margin:auto;
+				}
+			}
+
+
+		}
+
+		@include breakpoint(bp_mid){
+			width:100%;
+			margin:auto;
+		}
+
+	}
+
+
+
+}

@@ -1,0 +1,196 @@
+// ===================================================================================
+//	CANDY TYPES
+// ===================================================================================
+#services
+{
+	min-height: $default_section_height;
+	background: url(../images/bg/background1.jpg) repeat center center $cream;
+
+	.content-wrapper
+	{
+		text-align: center;
+		padding: 10em 0 5em;
+		position: relative;
+
+		@include breakpoint(bp_mobile){
+			padding-top: 17em;
+		}
+	}
+
+	.ajax-loader
+	{
+		top: 16em;
+		position: relative;
+
+		.loader-wrapper
+		{
+			position: absolute;
+			margin: auto;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.type-item-wrapper
+	{
+		@include pie-clearfix;
+		position: relative;
+		z-index: 2;
+	}
+
+	.type-item
+	{
+		float: left;
+		text-align: center;
+		background-color: #FFF;
+		padding: 1em;
+		padding-bottom: 2em;
+		width: 33.33%;
+		height: 37em;
+		box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+
+		transform: scale(0.9);
+		opacity: 0.5;
+		transition: opacity 0.3s ease;
+		transition: transform 0.3s ease;
+
+		cursor: pointer;
+
+		@include breakpoint(bp_mobile){
+			width: 100%;
+			height: auto;
+		}
+
+		&.active
+		{
+			opacity: 1;
+			transform: scale(1);
+			transition: opacity 0.3s ease;
+			transition: transform 0.3s ease;
+		}
+
+		&:hover
+		{
+			opacity: 1;
+		}
+
+		.type-image
+		{
+			display: block;
+			line-height: 1em;
+			height: 16em;
+			width: 25em;
+
+			@include breakpoint(bp_mobile){
+				width: 100%;
+			}
+		}
+
+		.type-info
+		{
+			text-align: center;
+			padding-top: 1.5em;
+
+			.type-title
+			{
+				font-size: 1.5em;
+				line-height: 1em;
+				padding-bottom: 0.2em;
+			}
+
+			.type-sub-title
+			{
+				font-size: 1.8em;
+				line-height: 1em;
+				text-transform: uppercase;
+				padding-bottom: 1em;
+			}
+
+			.type-content
+			{
+				padding: 0 1em;
+			}
+		}
+	}
+	
+	// ===================================
+	//	Pagination nav
+	// ===================================
+	.type-item-nav
+	{
+		padding-top: 4em;
+
+		.item
+		{
+			display: inline-block;
+			font-size: 1.5em;
+			width: 1em;
+			height: 1em;
+			background: #f2f1ed;
+			border-radius: 1em;
+			cursor: pointer;
+			margin-right: 0.5em;
+
+			&:last-child
+			{
+				margin-right: 0;
+			}
+
+			&.active, &:hover
+			{
+				background: #FFF;
+			}
+		}
+	}
+	
+	// ===================================
+	//	Arrow nav
+	// ===================================
+	.type-arrow-nav
+	{
+		position: absolute;
+		top: 50%;
+		left: -1.5em;
+		right: -1.5em;
+		z-index: 1;
+		color: #FFF;
+		transform: translateY(-50%);
+		font-size: 3.2em;
+		display: none;
+
+		&.active
+		{
+			display: block;
+		}
+
+		.icon-circle-left
+		{
+			float: left;
+		}
+
+		.icon-circle-right
+		{
+			float: right;
+		}
+
+		.icon-circle-left, .icon-circle-right
+		{
+			cursor: pointer;
+
+			&:hover
+			{
+				color: $grey;
+			}
+
+			&:active
+			{
+				animation: pressBtnSimple 0.2s linear;
+				transform-origin: center center;
+			}
+
+			@include breakpoint(bp_mid){
+				display:none;
+			}
+		}
+	}
+}

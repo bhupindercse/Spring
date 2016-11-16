@@ -1,0 +1,122 @@
+/* ================================================================================================
+	DISPLAY TABLE
+================================================================================================ */
+table.display_table
+{
+	position:relative;
+	width:100%;
+	border-radius: 6px;
+	border: 3px solid $dark_grey;
+
+	// Needed for border radius w/ border on table
+	border-spacing: 0;
+	border-collapse: separate;
+
+	tr:last-child td:first-child {
+		border-bottom-left-radius: 3px;
+	}
+
+	tr:last-child td:last-child {
+		border-bottom-right-radius: 3px;
+	}
+}
+table.display_table td, table.display_table th
+{
+	text-align: left;
+	vertical-align: middle;
+	padding: 1em 1rem;
+}
+
+table.display_table th
+{
+	color:#FFFFFF;
+	font-size: 1em;
+	text-transform: uppercase;
+	cursor: auto;
+	letter-spacing: 1px;
+	background: $dark_grey;
+
+	// @include breakpoint(small-break){
+	// 	font-size: 1.1em;
+	// }
+}
+
+table.display_table
+{
+	tr
+	{
+		background: #FFF;
+		border: 1px solid transparent;
+
+		&:nth-child(even){
+			background: #aaa;
+		}
+	}
+
+	// .inactive-item
+	// {
+	// 	background: linear-gradient(to bottom, #E9FDA7, #b3d44c);
+	// }
+}
+
+table.display_table tr.clickable:hover, table.display_table tr.active-row
+{
+	cursor:pointer;
+	background: lighten($blue, 30);
+}
+
+div.edit_btn
+{
+	color: $dark_grey;
+	text-transform: uppercase;
+	padding:2px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+
+// table.display_table th.sortable
+// {
+// 	position: relative;
+// 	padding-right: 1.8em;
+// }
+// .sortable:hover
+// {
+// 	background:#c5711f;
+// 	cursor:pointer;
+// }
+// .active-sortable
+// {
+// 	// @include breakpoint(small-break){
+// 	// 	padding-left: 1.4em !important;
+// 	// }
+
+// 	&:after
+// 	{
+// 		position: absolute;
+// 		display: block;
+// 		content: "\201d";
+// 		font-family: 'icomoon';
+// 		-webkit-font-smoothing: antialiased;
+// 		-moz-osx-font-smoothing: grayscale;
+// 		top: 0;
+// 		bottom: 0;
+// 		right: 10px;
+// 		margin: auto;
+// 		height: 1em;
+// 		font-size: 1.6em;
+// 		width: 1em;
+
+// 		// @include breakpoint(small-break){
+// 		// 	left: 0;
+// 		// 	right: auto;
+// 		// 	@include x-rem(font-size, 1.2);
+// 		// }
+// 	}
+// }
+// .desc:after
+// {
+// 	content: "\7b";
+// }
+
+

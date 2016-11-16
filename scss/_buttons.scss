@@ -1,0 +1,116 @@
+/* ================================================
+	BUTTON
+================================================ */
+
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+$button-top-margin: 1em;
+
+.btn_container
+{
+	@include pie-clearfix;
+	clear:both;
+	position: relative;
+
+	&.floated-btn-container
+	{
+		float: left;
+	}
+
+	&.right-aligned
+	{
+		text-align: right;
+
+		.btn
+		{
+			margin-right: 0;
+		}
+	}
+
+	&.centered-btn
+	{
+		text-align: center;
+
+		.btn
+		{
+			width: auto;
+			max-width: 100%;
+		}
+	}
+
+	.right-aligned-btn
+	{
+		float: right;
+	}
+}
+.btn
+{
+	clear:both;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .7em 1em .75em;
+	margin-top: $button-top-margin;
+	text-transform: uppercase;
+
+	color: #FFF;
+	background: $theme_blue;
+	border: 2px solid $theme_blue;
+	border-radius: 5px;
+	
+	&:hover {
+		border-color: darken($theme_blue, 20);
+	}
+
+	&:active {
+		position: relative;
+		box-shadow: 0 0 10px rgba(255,238,33,0.5);
+		background: $dark_grey;
+		border: 2px solid $dark_grey;
+
+		animation: pressBtn 0.2s linear;
+		transform-origin: center center;
+	}
+
+	&[disabled]
+	{
+		background: $grey;
+		border-color: lighten($grey, 20);
+		cursor: auto;
+		color: #ccc;
+	}
+}
+
+@keyframes pressBtn {
+	50%
+	{
+		transform: scale(1.1);
+		box-shadow: 0 0 11px 1px rgb(0, 255, 139);
+	}
+
+	100%
+	{
+		transform: scale(1);
+		box-shadow: none;
+	}
+}
+@keyframes pressBtnSimple {
+	50%
+	{
+		transform: scale(1.1);
+	}
+
+	100%
+	{
+		transform: scale(1);
+	}
+}
+
+.hidden-btn
+{
+	display: none;
+}

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#disclaimer
+{
+	display: none;
+}
+
+.swf-form, .ajax-form
+{
+	display: none;
+}
+
+.swfupload .swf-form
+{
+	display: block;
+}
+.ajax-upload .ajax-form
+{
+	display: block;
+	margin-top: 1em;
+}

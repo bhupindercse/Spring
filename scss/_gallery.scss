@@ -1,0 +1,127 @@
+// ===================================================================================
+//	GALLERY
+// ===================================================================================
+
+#gallery{
+	.content-wrapper
+	{
+		@include breakpoint(bp_mid){
+	 		padding-top: 0em;
+		}
+	}
+
+}
+
+
+.gallery-nav
+{
+	@include pie-clearfix;
+	padding: 2em;
+	text-align: center;
+	
+	@include breakpoint(bp_mobile){
+		padding: 1em 1em 2em;
+	}
+
+	.gallery-btn
+	{
+		color: $grey;
+		border-color: $grey;
+		cursor: pointer;
+		font-size: 1.2em;
+		margin-left: 1em;
+
+		@include breakpoint(bp_mobile){
+			width: 48%;
+			margin-right: 2%;
+
+			&:nth-child(even), &:last-child
+			{
+				margin-right: 0;
+			}
+		}
+
+		// &:first-child
+		// {
+		// 	margin-left: 0;
+		// }
+
+		&:hover, &.active
+		{
+			color: #fff;
+			border-color: $theme_blue;
+			background: $theme_blue;
+		}
+	}
+}
+
+.gallery-thumbs
+{
+	@include pie-clearfix;
+	text-align: center;
+
+	@include breakpoint(bp_mobile){
+		padding: 0 1em;
+	}
+
+	.gallery-thumbnail
+	{
+		display: inline-block;
+		margin-bottom: 1.5em;
+		width: 197px;
+		height: 198px;
+		overflow: hidden;
+		margin-right: 15px;
+
+		&:nth-child(4n + 4), &:last-child{
+			margin-right: 0;
+		}
+		
+		@include breakpoint(bp_mobile){
+			width: 46%;
+			// height: auto;
+			height: 178px;
+			overflow: hidden;
+			margin-right: 4%;
+
+			&:nth-child(even), &:last-child
+			{
+				margin-right: 0;
+			}
+		}
+
+		a
+		{
+			height: 100%;
+	
+			// Help center image
+			display: inline-block;
+			right: -50%;
+			position: relative;
+		}
+
+		img
+		{
+			min-width: 100%;
+			height: 100%;
+			width: auto;
+			max-width: none;
+	
+			// Center image
+			display: inline-block;
+			position: relative;
+			left: -50%;
+		}
+
+		.loader
+		{
+			min-width: auto;
+			height: auto;
+			display: block;
+			margin: auto;
+			left: auto;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}

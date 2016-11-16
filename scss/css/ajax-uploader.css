@@ -1,0 +1,182 @@
+.file-list {
+  border: 1px solid #333;
+  padding: 10px;
+  background: #cdcdcd;
+  color: #333;
+  margin: 10px 0;
+  overflow: hidden; }
+
+.file-list h1 {
+  margin: 10px 0;
+  margin-top: 0;
+  font-size: 18px;
+  color: #666;
+  background: none; }
+
+#files, #finished-files {
+  min-height: 0;
+  overflow: hidden;
+  clear: both; }
+
+#files .form-field {
+  padding: 0;
+  border-radius: 0; }
+
+#finished-files .upload-data {
+  float: left;
+  width: 60%;
+  padding-left: 1em; }
+
+.gallery-form .btn {
+  margin-right: 1em; }
+.gallery-form .progress-wrapper {
+  padding: 0;
+  margin-top: 1em; }
+
+#upload {
+  display: none; }
+
+.upload-elements {
+  clear: both;
+  min-height: 0;
+  overflow: hidden;
+  margin-bottom: 10px;
+  min-height: 100px;
+  margin-top: 1em; }
+  .upload-elements .upload-filename {
+    padding: 0.5em;
+    border: 1px solid #333;
+    margin-bottom: 0.5em;
+    background: linear-gradient(top, #ccc, #eee);
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+    .upload-elements .upload-filename .field-title {
+      font-weight: bold; }
+  .upload-elements .form-field .field-title {
+    font-weight: bold; }
+  .upload-elements .form-field #summary {
+    height: 5em; }
+
+.progress-wrapper {
+  padding: 1em; }
+  .progress-wrapper .progress-display {
+    position: relative;
+    width: 100%;
+    border: 1px solid #000;
+    background: #ddd; }
+  .progress-wrapper .file-prep-notice {
+    background: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none; }
+    .progress-wrapper .file-prep-notice .prep-loader {
+      position: relative;
+      display: block;
+      float: left;
+      background: url("../../images/ajax-16x16.gif") top left no-repeat;
+      height: 16px;
+      width: 16px;
+      content: "Loading";
+      text-indent: -100000px;
+      top: 0.5em; }
+    .progress-wrapper .file-prep-notice .prep-text {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-left: -16px;
+      padding-left: 26px;
+      padding-top: 0.5em; }
+
+.progress {
+  display: block;
+  overflow: hidden;
+  width: 6%;
+  height: 40px;
+  padding: 10px;
+  color: #FFF;
+  text-align: right;
+  background: linear-gradient(left, #999, #666);
+  transition-property: width;
+  transition-duration: .5s;
+  border: 1px solid #999; }
+  .progress.active-progress {
+    border: 1px solid #000;
+    background: linear-gradient(top, #00CC66, #003300); }
+  .progress.error-progress {
+    border: 1px solid #000;
+    background: linear-gradient(top, #FF4747, #7C1818); }
+
+.completed-upload {
+  background: #003300;
+  background: linear-gradient(top, #00CC66, #003300); }
+
+.error-bar {
+  background: #600;
+  background: linear-gradient(top, #900, #600); }
+
+.upload-caption textarea {
+  height: 3em;
+  width: 100%; }
+  .upload-caption textarea:focus {
+    background: #ECEAEA; }
+
+.img {
+  float: left;
+  width: 40%;
+  height: 100%;
+  min-height: 1px; }
+
+.img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%; }
+
+.upload-title {
+  margin: 0 0 10px; }
+
+.upload-cover-image {
+  margin: 5px 0; }
+
+.main-progress {
+  display: none; }
+
+.upload-error {
+  background: #FFF;
+  margin-top: 10px;
+  border: 1px solid #900;
+  padding: 5px;
+  color: #900;
+  display: none; }
+
+#general-errors {
+  background: #FFF;
+  margin-top: 10px;
+  border: 1px solid #900;
+  padding: 5px;
+  color: #900;
+  display: none; }
+
+.file-input-replacer {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  cursor: pointer; }
+
+.file-input-replacer input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0; }
+
+input[disabled="disabled"], textarea[disabled="disabled"] {
+  background: #eee; }
+
+.ckeditor-textarea {
+  min-height: 10em; }

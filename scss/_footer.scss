@@ -1,0 +1,98 @@
+// ===================================================================================
+//	DIGITAL MEDIA FOOTER
+// ===================================================================================
+.footer
+{
+	@include pie-clearfix;
+	padding: 1em;
+	background-color: #fff; 
+	height: 12em;
+	// //background: url(../images/bg/pattern-dark.jpg) repeat center center #1c1c1c;
+	
+	// // Sticky magic
+	// display: table-row;
+	// height: 12em;
+
+
+	// .footer_content{
+	// 	width: 80%;//50%;
+	// 	margin:auto;
+
+	// 	.footer_outer_box{
+		
+	// 		.footer_categories{
+	// 			display: inline-block;
+	// 			float: left;
+	// 			ul{
+	// 				list-style-type: none;
+	// 				li{
+	// 					color: #5e7e91; 
+	// 					font-family: 'roboto_light';
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+
+	// 	@include breakpoint(bp_mid){
+	// 		width:100%;
+	// 		margin:auto;
+	// 	}
+	// }
+
+}
+
+	.footer_content{
+			width: 80%;//50%;
+			margin:auto;
+			text-align: center;
+			@include breakpoint(bp_mid){
+				width:100%;
+				margin:auto;
+			}
+		}
+		
+			
+	.footer_categories{
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		ul{
+			list-style-type: none;
+			li{
+				color: #5e7e91; 
+				font-family: 'roboto_light';
+			}
+		}
+	}
+
+// .footer-dm
+// {
+// 	text-align: center;
+// 	padding: 1.5em;
+// 	font-family: Verdana;
+// 	font-size: 12px;
+
+// 	// @include breakpoint(bp_800){
+// 	// 	width: 100%;
+// 	// }
+
+// 	a
+// 	{
+// 		color: #787878;
+// 	}
+// }
+
+.icon-twitter-with-circle, .icon-facebook-with-circle, .icon-youtube-with-circle {
+	color: $theme_blue;
+	font-size: 3em;
+}
+
+.social_icons_div{
+	padding-top: 3em; 
+	margin-left:3em; 
+	float: left;
+	@include breakpoint(bp_mid){
+		padding-top:2em;
+		padding-bottom:2em;
+	}
+}

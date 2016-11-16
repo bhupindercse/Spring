@@ -1,0 +1,246 @@
+// ===================================================================================
+//	FORM ELEMENTS
+// ===================================================================================
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+textarea
+{
+	display: block;
+	border: none;
+	border-radius: 4px;
+	color: #666;
+	padding: 0.7em 0.5em;
+	// font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	width: 100%;
+	max-width: 100%;
+	background: #fff;//#f2f2f2;
+
+	&.auto-width
+	{
+		width: auto;
+	}
+
+	&.date
+	{
+		width: 50%;
+	}
+
+	&:focus
+	{
+		outline: none;
+		background: darken(#f2f2f2, 10);
+	}
+}
+textarea
+{
+	resize:none;
+	width:100%;
+	height:14em;
+}
+
+.form-field
+{
+	@include pie-clearfix;
+	position: relative;
+	padding: 0.5em 0;
+	border-radius: 4px;
+	clear:both;
+
+	&.error_container
+	{
+		margin-bottom: 5px;
+
+		input
+		{
+			border-color: $theme_blue;
+			background: rgba(255, 236, 236, 1);
+		}
+
+		input:-webkit-autofill
+		{
+			box-shadow: 0 0 0 50px rgba(255, 190, 190, 0.8) inset;
+			-webkit-text-fill-color: #000;
+
+			&:focus
+			{
+				outline:none;
+				box-shadow: 0 0 0 50px rgba(255, 190, 190, 0.8) inset;
+			}
+		}
+	}
+
+	&.date-field
+	{
+		width: 50%;
+		clear: none;
+		float: left;
+
+		input
+		{
+			width: 100%;
+		}
+	}
+
+	&.half-field
+	{
+		width: 50%;
+		float: left;
+		clear: none;
+	}
+
+	&.clear-float
+	{
+		float:none;
+		clear:both;
+	}
+
+	&.floated-field
+	{
+		h2
+		{
+			width: 8em;
+			float: left;
+			height: 100%;
+			padding-top: 0.5em;
+		}
+
+		input
+		{
+			float: left;
+		}
+
+		.error
+		{
+			float: none;
+			clear: both;
+		}
+	}
+
+	&.no-label-field
+	{
+		label
+		{
+			display: none;
+		}
+	}
+
+	label
+	{
+		display: block;
+		font-size: 1.2em;
+		color: $blue;
+		margin: 0;
+		padding: 0.5em 0;
+	}
+}
+
+.floated-field-container
+{
+	@include pie-clearfix;
+
+	.half-field
+	{
+		padding-right: 1em;
+
+		&:nth-child(even){
+			padding-right: 0;
+		}
+	}
+}
+
+input::-webkit-input-placeholder
+{
+	color: #aaa;
+	font-family: $font_base_family;
+}
+input:-moz-placeholder
+{
+	color: #aaa;
+	font-family: $font_base_family;
+}
+input::-moz-placeholder
+{
+	color: #aaa;
+	font-family: $font_base_family;
+}
+input:-ms-input-placeholder
+{
+	color: #aaa;
+	font-family: $font_base_family;
+}
+input:focus::-webkit-input-placeholder
+{
+	color: #999;
+}
+input:focus:-moz-placeholder
+{
+	color: #999;
+}
+input:focus::-moz-placeholder{
+	color: #999;
+}
+input:focus:-ms-input-placeholder
+{
+	color: #999;
+}
+
+input:-webkit-autofill
+{
+	//-webkit-box-shadow:0 0 0 50px white inset;
+	box-shadow: 0 0 0 50px #f2f2f2 inset;
+	-webkit-text-fill-color: #666;
+
+	&:focus
+	{
+		outline:none;
+		box-shadow: 0 0 0 50px darken(#f2f2f2, 10) inset;
+	}
+}
+
+// ===================================================================================
+//	IMAGE UPLOAD
+// ===================================================================================
+.img-preview
+{
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #eee;
+
+	img
+	{
+		max-height: 200px;
+	}
+
+	.image_name
+	{
+		margin-bottom: 10px;
+	}
+}
+
+// ===================================================================================
+//	Icon fields
+// ===================================================================================
+.icon-field
+{
+	position: relative;
+
+	input[type='text'],
+	input[type='email'],
+	input[type='password']
+	{
+		padding-right: 3em;
+		padding-left: 4.5em;
+	}
+
+	.field-icon
+	{
+		position: absolute;
+		top: 0.5em;
+		right: 0.8em;
+		font-size: 1.2em;
+		color: $theme_blue;
+	}
+}

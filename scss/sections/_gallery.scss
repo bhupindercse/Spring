@@ -1,0 +1,25 @@
+// ===================================================================================
+//	GALLERY
+// ===================================================================================
+#gallery
+{
+	min-height: $default_section_height;
+	background: #FFF;
+	padding-top: 7em;
+	text-align: center;
+
+	.red-txt
+	{
+		text-transform: uppercase;
+		font-family: 'artifikamedium';
+		font-size: 1.2em;
+	}
+
+	p
+	{
+		font-size: 1.1em;
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ===============================
+		SWFUPLOADER
+=============================== */
+#swfupload-control p
+{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#log
+{
+	position:relative;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+#log li
+{
+	display:block;
+	list-style:none;
+	list-style-position:inside;
+	margin:2px;
+	border:1px solid #333;
+	padding:10px;
+	font-size:12px; 
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	background:#CCCCCC;
+	position:relative;
+	min-height:70px;
+	overflow:hidden;
+}
+#log li .progressbar{ border:1px solid #333; height:5px; background:#fff; width: 500px; }
+#log li .progress{ background:#999; width:0%; height:5px; }
+#log li p{ margin:0; line-height:18px; }
+#log li.success{ border:1px solid #339933; background:#ccf9b9; }
+#log li.error{ border:1px solid #990000; background:#EDACB0; }
+#log li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+	background:url('../scripts/swfuploader/js/swfupload/cancel.png') no-repeat; cursor:pointer; }
+#log li div.item_info
+{
+	position:relative;
+	float:left;
+	width: 500px;
+}
+#log li span.img
+{
+	position:relative;
+	float:right;
+}
+
+#log li input.caption_text
+{
+	height:100px;
+	width:500px;
+}
+
+#uploaded
+{
+	width:96%;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:2%;
+	padding-right:2%;
+	background:#333333;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+#file_list
+{
+	display:none;
+}
+
+#current_files
+{
+	background: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#FFF)); /* for webkit browsers */
+	background-image: -webkit-linear-gradient(#CCC, #FFF); 
+	background-image: -o-linear-gradient(#CCC, #FFF); 	/* Opera 11.10+ */
+	background: -moz-linear-gradient(top, #CCC,  #FFF); /* for firefox 3.6+ */ 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#FFFFFF'); /* for IE */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#CCCCCC, endColorstr=#FFFFFF)";
+	min-height:10px;
+	overflow:hidden;
+	color: #333;
+}
+#current_files div.current_img_title
+{
+	font-weight:bold;
+	font-size:1.2em;
+	color: #000;
+	margin:5px;
+}
+#current_files div.current_files_text
+{
+	margin:5px;
+}
+#current_files div.current_images
+{
+	margin:10px;
+	min-height:10px;
+	overflow:hidden;
+}
+
+div.current_images a.editing_pic
+{
+	display:block;
+	float:left;
+	margin-right:10px;
+	margin-bottom:5px;
+	text-decoration:none;
+}
+div.current_images a.editing_pic img
+{
+	display:block;
+	width:200px;
+	margin-bottom:-1px;
+}
+
+div.current_images a:hover img
+{
+	-moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+
+div.current_images div.editing_container
+{
+	float:right;
+	width:400px;
+}
+div.current_images div.editing_container input[type=text]
+{
+	width:385px;
+	padding:3px 5px;
+	border:1px solid #999;
+}
+
+div.current_images label.selectable_checkbox
+{
+	display:block;
+	float:none;
+}

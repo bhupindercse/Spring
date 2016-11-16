@@ -1,0 +1,34 @@
+/* =======================================
+	ERROR & SUCCESS
+======================================= */
+.error
+{
+	background: linear-gradient(to bottom, #FFDFDF, #FF6060);
+	font-weight: bold;
+	color: #6E1313;
+	padding: 1em;
+	border-radius: 8px;
+	border: 1px solid rgb(123, 29, 29);
+	margin-bottom: 1em;
+	list-style: none;
+}
+.success
+{
+	background: linear-gradient(to bottom, #63A854, #316F00);
+	font-weight: bold;
+	color: #FFF;
+	padding: 1em;
+	border-radius: 8px;
+	border: 1px solid #014110;
+	margin-bottom: 1em;
+
+	a
+	{
+		color: #87E065;
+
+		&:hover
+		{
+			color: #FFF;
+		}
+	}
+}

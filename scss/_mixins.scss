@@ -1,0 +1,31 @@
+// ===================================================================================
+//	General Mixins for website
+// ===================================================================================
+@mixin pie-clearfix
+{
+	&:after
+	{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin breakpoint($point)
+{
+	@if $point == bp_large {
+		@media (max-width: $width) { @content; }
+	}
+	@elseif $point == bp_mid {
+		@media (max-width: 1030px) { @content; }
+	}
+	@elseif $point == bp_small {
+		@media (max-width: 800px) { @content; }
+	}
+	@elseif $point == bp_mobile {
+		@media (max-width: 600px) { @content; }
+	}
+	@else {
+		@media (max-width: $point) { @content; }
+	}
+}

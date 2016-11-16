@@ -1,0 +1,142 @@
+// ===================================================================================
+//	HOME
+// ===================================================================================
+#home
+{
+	min-height: 60em; //$default_section_height;
+	background: url(../images/background1.jpg) no-repeat center center #000;
+	background-size: cover;
+	// margin-top:5em;
+
+	&.active_menu{
+		padding-top: 10em;
+	}
+
+	.content-wrapper
+	{
+		color: #000;
+		padding-top: 17em;
+		padding-bottom: 5em;
+		text-align: center;
+
+		h1
+		{
+			font-size: 3em;
+			//font-family: 'artifikamedium';
+			padding: 0 0.2em 0.8em;
+			border-bottom: 2px solid $theme_blue;
+			margin-bottom: 0.8em;
+			text-transform: uppercase;
+			display: inline-block;
+
+			// @include breakpoint(bp_small){
+			// 	font-size: 2.5em;
+			// }
+		}
+
+		p
+		{
+			margin: auto;
+			margin-bottom: 1em;
+			font-size: 1.4em;
+			line-height: 1.1em;
+			width: 70%;
+			font-family: 'opensans_light';
+
+			// @include breakpoint(bp_small){
+			// 	padding: 0em 1em;
+			// //	width: 100%;
+			// }
+
+			&.highlighted
+			{
+				//font-family: 'artifikamedium';
+				text-transform: uppercase;
+				font-size: 1.5em;
+				line-height: 1em;
+				font-weight: normal;
+			}
+		}
+
+		@include breakpoint(bp_mid){
+			padding-top: 18em;//30em;
+		}
+	}
+	@include breakpoint(bp_mid){
+		min-height: 45em;
+	}
+}
+
+.transparent-link
+{
+	font-size: 1.5em;
+	line-height: 1.1em;
+	text-transform: uppercase;
+	//font-family: 'artifikamedium';
+
+	color: #FFF;
+	display: block;
+	border: 1px solid #FFF;
+	border-radius: 0.5em;
+	padding: 0.8em;
+	display: inline-block;
+	margin-top: 0.5em;
+
+	&:hover
+	{
+		background: $red;
+		color: #FFF;
+	}
+}
+
+.home_content_padding{
+	padding-left: 3em;
+	padding-right: 3em;
+
+	img{
+
+		@include breakpoint(bp_mobile){
+			//padding-right: 4em;
+			width:100%;
+		}
+	}
+}
+
+.dm_presents{
+	font-family: 'roboto_light';
+	font-weight: bold;
+	font-size: 2.5em;
+	color: #fff;
+	padding-top: 0.5em;
+	padding-bottom: 1.5em;
+	@include breakpoint(bp_mid){
+		font-size: 1.5em;
+	}
+}
+
+.home_signup_button{
+	width:100%; 
+	margin:auto;
+
+	.btn{
+		font-family: $font_base_family;
+		background: darken($theme_red,10);//#C02727;
+		border: 2px solid darken($theme_red,10);
+		padding-left: 2em;
+		padding-right: 2em;
+		font-size: 2em;
+		&:hover{
+			color: #fff;
+			border: 2px solid darken($theme_red,15);
+			background:  darken($theme_red,15);
+		}
+		@include breakpoint(bp_mid){
+			font-size: 1.5em;
+			padding-left: 1.5em;
+			padding-right: 1.5em;
+		}
+	}
+	@include breakpoint(bp_mid){
+		padding-top:2em;
+	}
+}
